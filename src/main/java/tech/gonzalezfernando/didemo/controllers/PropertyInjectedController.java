@@ -8,10 +8,11 @@ import tech.gonzalezfernando.didemo.services.GreetingServiceImpl;
 public class PropertyInjectedController {
 
     @Autowired
-    public GreetingServiceImpl greetingService;
+    //@Qualifier("greetingServiceImpl")
+    public GreetingServiceImpl greetingServiceImpl;
 
     public String sayHello(){
-        return greetingService.sayGreeting();
+        return greetingServiceImpl.sayGreeting();
     }
 
 }
